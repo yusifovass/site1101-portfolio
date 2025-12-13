@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Student Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Qəmər Yusifova</a>
+        <button class="nav-toggle" data-target="site-nav-projects" aria-expanded="false" aria-controls="site-nav-projects">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="hamburger"></span>
+        </button>
+        <nav id="site-nav-projects" class="site-nav" role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container projects">
+        <h1>Projects</h1>
+        <p class="lead">A selection of projects I built while learning web development.</p>
+
+        <div class="projects-grid">
+          <!-- Project 1: Test 1 — Practice Web Project -->
+          <article class="project-card">
+            <img src="assets/img/robot.jpg" alt="Test 1 project thumbnail" class="project-image">
+            <div class="project-body">
+              <h3>Test 1 — Practice Web Project</h3>
+              <p>A beginner-friendly practice project I built while improving my front-end fundamentals. It focuses on clean HTML structure, basic styling, and small UI interactions as part of my learning journey.</p>
+              <p class="project-links"><a href="https://yusifovass.github.io/test1/" target="_blank" rel="noopener">View Live</a> — <a href="https://github.com/yusifovass/test1" target="_blank" rel="noopener">Source</a></p>
+            </div>
+          </article>
+
+          <!-- Project 2: Bootstrap Layout Practice -->
+          <article class="project-card">
+            <img src="assets/img/bootstrap-icons.png" alt="Bootstrap Layout Practice thumbnail" class="project-image">
+            <div class="project-body">
+              <h3>Bootstrap Layout Practice</h3>
+              <p>A layout practice project built to explore Bootstrap components and responsive design patterns. This project helped me understand grids, spacing, and building consistent UI sections faster.</p>
+              <p class="project-links"><a href="https://yusifovass.github.io/bootstrap-2/" target="_blank" rel="noopener">View Live</a> — <a href="https://github.com/yusifovass/bootstrap-2" target="_blank" rel="noopener">Source</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="credits">&copy; 2025 Qəmər Yusifova</div>
+        <div class="social">
+          <a href="https://github.com/yusifovass" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+          <a href="https://www.codecademy.com/profiles/text7176433804" target="_blank" rel="noopener" aria-label="Codecademy">Codecademy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
