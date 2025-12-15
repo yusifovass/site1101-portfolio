@@ -14,7 +14,8 @@
 
 /* Reset and base styles for the page */
 * { box-sizing: border-box; }
-html,body { height:100%; margin:0; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text); }
+html,body { min-height:100vh; margin:0; display:flex; flex-direction:column; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text); }
+main { flex:1; }
 img { max-width:100%; display:block; }
 
 .container { max-width:1100px; margin:0 auto; padding:1rem; }
@@ -56,9 +57,40 @@ img { max-width:100%; display:block; }
 .feature:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(244,114,182,0.12); }
 
 /* Projects */
-.projects-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; margin-top:1rem; }
-.project-card { background:var(--card); border-radius:var(--radius); overflow:hidden; display:flex; gap:1rem; box-shadow:0 8px 24px var(--shadow-pink); border:1px solid rgba(244,114,182,0.06); }
-.project-image { width:220px; height:140px; object-fit:cover; }
+.projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; margin-top:1rem; align-items:start; }
+.project-card { background:var(--card); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; gap:0.75rem; box-shadow:0 8px 24px var(--shadow-pink); border:1px solid rgba(244,114,182,0.06); padding:0.75rem; }
+.project-image { width:100%; height:auto; object-fit:cover; }
+
+/* Featured projects — visually prominent */
+.featured-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1rem; margin-top:0.75rem; align-items:start; }
+.featured-card { background:var(--card); border-radius:var(--radius); display:flex; flex-direction:column; gap:0.75rem; padding:1rem; box-shadow: 0 12px 32px rgba(217,70,122,0.08); border:1px solid rgba(244,114,182,0.08); }
+.featured-card .project-thumb { width:100%; aspect-ratio:16/9; border-radius:10px; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg, rgba(255,247,250,1), rgba(255,236,245,1)); border:1px solid rgba(244,114,182,0.06); box-shadow:0 6px 18px rgba(244,114,182,0.06); }
+.play-icon { font-size:2rem; color:var(--accent-dark); opacity:0.95; }
+.featured-body h3 { margin:0 0 0.5rem 0; }
+.featured-body .muted { color:var(--muted); margin:0 0 0.75rem 0; }
+
+/* Small thumb variant for practice projects */
+.project-thumb.small { aspect-ratio:4/3; height:140px; }
+
+/* Make card bodies align buttons at the bottom */
+.featured-body, .project-body { display:flex; flex-direction:column; }
+.btn-row { margin-top:auto; }
+.project-links { margin-top:auto; }
+
+
+/* Make featured project larger on desktop and adapt to smaller screens */
+@media (max-width: 1100px) {
+  .featured-card { padding:0.75rem; }
+  .featured-card .video-card { width:300px; }
+}
+
+@media (max-width: 900px) {
+  .featured-grid { grid-template-columns: 1fr; }
+  .featured-card { flex-direction:column; align-items:stretch; }
+  .featured-card .video-card { width:100%; max-width:100%; }
+  .featured-card .video-placeholder { border-radius:12px; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
 
 /* Decorative project placeholder used instead of images */
 .project-placeholder {
@@ -87,6 +119,7 @@ img { max-width:100%; display:block; }
   .hero-inner { grid-template-columns: 160px 1fr; }
   .features { grid-template-columns: repeat(2, minmax(200px, 360px)); justify-content:center; }
   .projects-grid { grid-template-columns: 1fr; }
+  .featured-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 700px) {

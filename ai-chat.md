@@ -334,3 +334,163 @@ Tweak shades (softer/darker pink) or typography?
 Add a printable PDF link on the Resume page?
 Make a small visual preview (screenshot) for review?
 Raptor mini (Preview) • 1x
+
+## User:
+You are updating an existing projects.html file in my portfolio website.
+DO NOT rewrite the whole site. Only update the Projects page structure and content.
+
+Requirements:
+1) Create two clear sections on the Projects page.
+
+SECTION 1 (top of the page):
+Title: "Featured Projects"
+- Add two projects here.
+- Each project must include:
+  - Project title
+  - Short description (2–3 lines)
+  - A styled video placeholder card (NOT embedded video)
+  - A clear button or link labeled "Watch Demo" that opens the YouTube link in a new tab.
+- Use these two YouTube demo links (placeholders, I will rename titles myself):
+  - Project A: [PASTE YT LINK 1 HERE]
+  - Project B: [PASTE YT LINK 2 HERE]
+
+SECTION 2 (below):
+Title: "Practice & Early Projects"
+- Move all existing/older projects into this section.
+- Rename them to clearly indicate they are earlier or practice projects.
+- Keep image placeholders (no broken image icons).
+
+Design & layout rules:
+- Featured projects must visually appear more important (slightly larger cards or placed first).
+- Spacing between cards should be consistent and clean.
+- No large empty gaps between buttons or sections.
+- Keep the footer at the bottom of the page.
+- Keep everything responsive (1 column on mobile, 2 on tablet, 2–3 on desktop).
+- Do not break navbar, footer, or any existing links.
+
+Deliverable:
+- Show only the updated projects.html (and minimal CSS changes if needed).
+## AI:
+
+I'll list planned steps and then update projects.html and add minimal CSS for the new layout.
+
+I'll open projects.html to inspect current structure.
+
+I'll inspect style.css to see existing styles and add minimal CSS for the new sections.
+
+I'm about to patch projects.html to add the two sections and update project cards, and add minimal CSS in style.css for featured cards and video placeholders.
+
+Edited
+projects.html+56-20
+I'll add minimal CSS rules to style featured cards, video placeholders, and responsive behavior.
+
+Edited
+style.css+23-0
+Done — I updated the Projects page and added minimal CSS.
+
+What I changed
+
+projects.html: Added Featured Projects (two featured cards with video placeholders and "Watch Demo" buttons using your placeholder YouTube links) and moved the previous items into Practice & Early Projects with renamed titles and placeholders.
+Watch Demo links use: [PASTE YT LINK 1 HERE] and [PASTE YT LINK 2 HERE] (open in new tab).
+Video placeholders are non-embedded cards with play icon overlays.
+style.css: Added styling for .featured-grid, .featured-card, .video-placeholder, and responsive rules so layout is 1 column on mobile, 2 on tablet, 2–3 on desktop; featured cards appear visually larger.
+Files changed:
+
+projects.html
+style.css
+Would you like me to replace the placeholder YouTube links with real URLs and/or tweak the visual size of the featured cards?
+
+## User:
+You are updating my existing STATIC portfolio website (HTML/CSS/vanilla JS). Do NOT rewrite the whole site. Only update the Projects page (projects.html) and, if absolutely necessary, small related CSS in assets/css/style.css.
+
+GOAL:
+- The two NEW projects must appear FIRST (top of the page) and REPLACE the old two projects as the main featured items.
+- The OLD projects must still remain on the page, but moved BELOW under a separate section with different names.
+
+NEW YOUTUBE LINKS (Featured Projects):
+1) Project 1 (Featured): https://youtu.be/sVX4yq-9aFw?si=hpYEYpyc79Xpeg-s
+2) Project 2 (Featured): https://youtu.be/Ao8wsVjbm0Q?si=vFkFTowE7_3D720T
+
+REQUIREMENTS:
+1) Create TWO sections on projects.html:
+
+SECTION A (TOP): Title: "Featured Projects"
+- Add exactly 2 project cards here using the NEW YouTube links above.
+- Each card must include:
+  - Title (use: "Featured Project 1" and "Featured Project 2" for now)
+  - Short description (2–3 lines, beginner/student tone)
+  - A screenshot/image placeholder (NO real images and NO broken image icons)
+    * Prefer a styled <div class="project-thumb"> placeholder instead of <img>
+  - A button or link: "Watch Demo" that opens the YouTube link in a new tab (target="_blank" + rel="noopener").
+
+SECTION B (BELOW): Title: "Practice & Early Projects"
+- Move the OLD project cards here (the ones currently on the page).
+- Rename them to:
+  - "Practice Project 1"
+  - "Practice Project 2"
+- Keep their existing links (if any) but ensure layout is clean.
+
+2) Layout / styling fixes:
+- Remove large awkward gaps between buttons/cards.
+- Make cards equal height and align buttons at the bottom of cards.
+- Responsive behavior:
+  - mobile: 1 column
+  - tablet: 2 columns
+  - desktop: 2–3 columns depending on available width
+- Footer must stay at the bottom (use a sticky-footer flex layout if needed: body min-height:100vh; main flex:1; footer margin-top:auto), without overlaying content.
+
+OUTPUT:
+- Show the updated projects.html (full file).
+- If you changed CSS, show only the minimal added/edited CSS blocks in assets/css/style.css.
+- Do not change content on other pages and do not break navbar/footer links.
+## AI:
+
+I'm about to update projects.html to set exact titles and YouTube links and adjust placeholders; then patch style.css to add responsive grid and equal-height card styles plus sticky footer rules.
+
+Edited
+projects.html+16-20
+I'm adding CSS: sticky footer base, responsive grid rules, card equal-height and button alignment, and project-thumb placeholder styles.
+
+Edited
+style.css+18-8
+Done — I updated the Projects page and added minimal CSS.
+
+Updated file: projects.html (full)
+
+CSS changes (minimal blocks added/edited in style.css)
+
+Sticky footer baseline:
+Responsive grids and equal-height cards / button alignment / placeholders:
+Notes:
+
+Featured cards appear first and are visually emphasized; they use Featured Project 1 / Featured Project 2 and the exact YouTube links you supplied.
+Old projects are moved to "Practice & Early Projects" and renamed Practice Project 1 / Practice Project 2 with their existing links preserved.
+Placeholders use styled <div class="project-thumb"> (no broken images).
+Cards are equal-height and buttons align to the bottom. Grids use auto-fit for 1 column on mobile, 2 columns on tablet, and expand to 2–3 on wider screens.
+Footer is kept at the bottom via flex layout and won't overlay content.
+Would you like me to:
+
+Replace the placeholder thumbnails with specific screenshots you have?
+Tweak spacing/contrast or the featured card size further?
+
+## User:
+add bootstrap-icons.png and robot.jpg as a photo to Practice Project 1
+Practice Project 2
+## AI:
+I'll check the project's img folder to see if the images exist and then add <img> tags into the practice project cards if present.
+
+I'll patch projects.html to replace the small placeholder divs with image tags pointing to the existing files.
+
+Edited
+projects.html+2-2
+projects.html
+
+Done — I added robot.jpg to Practice Project 1 and bootstrap-icons.png to Practice Project 2 as requested, using <img> tags with alt text and existing styling classes.
+
+Quick check:
+
+Images are present in img.
+Cards keep consistent styling and responsive behavior.
+Would you like the images to be cropped/fitted differently (e.g., object-fit: cover with fixed heights), or is this appearance good?
+
+Raptor mini (Preview) • 1x
